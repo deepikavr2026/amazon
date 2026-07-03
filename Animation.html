@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            background-color: #f0f0f0;
+        }
+        .box{
+            width: 120px;
+            height: 120px;
+            background: red;
+
+            animation-name: myAnimation;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        /*@keyframes myAnimation{
+            0%{
+                transform: translatex(0px) rotate(0deg);
+                background: red;
+                border-radius: 0%;
+            }
+            25%{
+                 transform: translatex(100px) rotate(90deg);
+                background: blue;
+            }
+            50%{
+                 transform: translatex(100px) rotate(180deg);
+                background: green;
+            }
+            75%{
+                 transform: translatex(-100px) rotate(180deg);
+                background: orange;
+            }
+            100%{
+                 transform: translatex(-100px) rotate(360deg);
+                background: purple;
+                border-radius: 50%;
+            }
+        }*/
+
+        @keyframes myAnimation{
+        0%{
+            transform: translate(0,0);
+            background: red;
+        }
+        25%{
+           transform: translate(100px,0);
+            background: blue; 
+        }
+        50%{
+            transform: translate(100px,100px);
+            background: yellow;
+        }
+        75%{
+            transform: translate(0,100px);
+            background: green;
+        }
+        100%{
+            transform: translate(0,0);
+            background: red;
+        }
+        }
+
+    </style>
+</body>
+<div class="box"></div>
+</html>
